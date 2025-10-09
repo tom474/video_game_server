@@ -1,0 +1,7 @@
+@VideoGameServer_HostAddress = http://localhost:5231
+
+### Get vehicle games
+GET {{VideoGameServer_HostAddress}}/api/VideoGame
+Accept: application/json
+
+###

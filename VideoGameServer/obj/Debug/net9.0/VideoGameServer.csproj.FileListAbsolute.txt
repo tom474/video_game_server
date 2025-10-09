@@ -31,3 +31,5 @@ C:\Users\trmc\.trmc\Learning\VideoGameServer\VideoGameServer\obj\Debug\net9.0\re
 C:\Users\trmc\.trmc\Learning\VideoGameServer\VideoGameServer\obj\Debug\net9.0\VideoGameServer.pdb
 C:\Users\trmc\.trmc\Learning\VideoGameServer\VideoGameServer\obj\Debug\net9.0\VideoGameServer.genruntimeconfig.cache
 C:\Users\trmc\.trmc\Learning\VideoGameServer\VideoGameServer\obj\Debug\net9.0\ref\VideoGameServer.dll
+C:\Users\trmc\.trmc\Learning\VideoGameServer\VideoGameServer\bin\Debug\net9.0\Scalar.AspNetCore.dll
+C:\Users\trmc\.trmc\Learning\VideoGameServer\VideoGameServer\obj\Debug\net9.0\VideoGameServer.sourcelink.json

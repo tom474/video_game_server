@@ -1,0 +1,15 @@
+@VideoGameServer_HostAddress = http://localhost:5231
+
+### Update video game
+PUT {{VideoGameServer_HostAddress}}/api/VideoGame/1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "Spider-Man 2 - Updated Edition",
+    "platform": "PS5",
+    "developer": "Insomniac Games",
+    "publisher": "Sony Interactive Entertainment"
+}
+
+###

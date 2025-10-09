@@ -1,6 +1,7 @@
 @VideoGameServer_HostAddress = http://localhost:5231
 
-GET {{VideoGameServer_HostAddress}}/weatherforecast/
+### Get video game by id
+GET {{VideoGameServer_HostAddress}}/api/VideoGame/1
 Accept: application/json
 
 ###

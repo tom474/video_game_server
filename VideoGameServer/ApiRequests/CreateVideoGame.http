@@ -1,0 +1,15 @@
+@VideoGameServer_HostAddress = http://localhost:5231
+
+### Create video game
+POST {{VideoGameServer_HostAddress}}/api/VideoGame
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "Hogwarts Legacy",
+    "platform": "PC",
+    "developer": "Avalanche Software",
+    "publisher": "Warner Bros. Games"
+}
+
+###

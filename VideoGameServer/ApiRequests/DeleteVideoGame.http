@@ -1,0 +1,7 @@
+@VideoGameServer_HostAddress = http://localhost:5231
+
+### Delete video game by ID
+DELETE {{VideoGameServer_HostAddress}}/api/VideoGame/3
+Accept: application/json
+
+###
