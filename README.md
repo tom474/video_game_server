@@ -1,22 +1,21 @@
 # Video Game Server
 
-Video Game Server is a C#/.NET server foundation intended for multiplayer gameplay (real-time or turn-based). It provides a starting point for networking, session management, and future game-specific logic.
+Video Game Server is an ASP.NET Core backend that provides a structured Web API project with controllers, models, Entity Framework Core, and SQL Server configuration.
 
 ## Tech Stack
 
-- Server: C# (.NET), Visual Studio solution (`VideoGameServer.sln`)
-- Build Tools: .NET SDK 8.0+ or Visual Studio 2022+
-- Package Management: NuGet
+- Server: ASP.NET Core (.NET 8), Entity Framework Core
+- Database: Microsoft SQL Server (e.g., SQLExpress)
+- Tooling: .NET SDK 8.0+, Visual Studio 2022+ or VS Code
 
 ## Features
 
-- Core server project scaffold in C#
-- Structured solution layout for easy development and deployment
-- Extensible architecture for:
-  - Session and player management (planned)
-  - Matchmaking/lobbies (planned)
-  - Persistence/data store integration (planned)
-  - Health/readiness endpoints and basic observability (planned)
+- Web API project with Controllers and Models
+- Entity Framework Core with SQL Server integration
+- Existing EF Core migrations
+- Configuration via `appsettings.json` and `appsettings.Development.json`
+- OpenAPI documentation enabled in Development via Scalar.AspNetCore
+- HTTPS redirection and authorization middleware
 
 ## Quick Start
 
@@ -34,6 +33,21 @@ Navigate to the project directory
 cd video_game_server
 ```
 
+Configure the database connection
+
+- Update the SQL Server connection string in:
+  - `VideoGameServer/appsettings.Development.json` (for local development), or
+  - `VideoGameServer/appsettings.json`
+
+Example:
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost\\SQLExpress;Database=VideoGameDb;Trusted_Connection=true;TrustServerCertificate=true;"
+  }
+}
+```
+
 Restore dependencies and build
 
 ```bash
@@ -41,16 +55,20 @@ dotnet restore
 dotnet build
 ```
 
-Run the server (CLI)
+Apply database migrations
 
 ```bash
-# Option A: Run by project directory
-dotnet run --project ./VideoGameServer
+# If you don't have it yet:
+# dotnet tool install --global dotnet-ef
 
-# Option B: If you prefer, open the solution in Visual Studio and press F5
+dotnet ef database update --project ./VideoGameServer
 ```
 
-Environment configuration
+Run the server
 
-- No required environment variables at this time.
-- If the project introduces configuration files later, place them in `VideoGameServer/appsettings.json` and `appsettings.Development.json` as needed.
+```bash
+# CLI
+dotnet run --project ./VideoGameServer
+
+# Or open VideoGameServer.sln in Visual Studio and press F5
+```
